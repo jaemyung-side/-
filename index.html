@@ -80,26 +80,6 @@
 
 
 
-    	function show_test() {
-			$.ajax({
-	    		type: "GET",
-	    		url: "http://spartacodingclub.shop/order?item_give=양초",
-	    		data: { },
-	    		success: function(response){
-	    			console.log(response["orders"].length);
-	    			let total_count = 0;
-	    			for (let i=0; i<response["orders"].length; i++) {
-	    				let count_str = response["orders"][i]["count"];
-	    				if (response["orders"][i]["name"] == "유재명") {
-	    					total_count += parseInt(count_str);
-	    				}
-	    			}
-
-	    			$('#service-subject').text(total_count);
-	    		}
-	    	})
-
-    	}
     	
 
 
